@@ -1,7 +1,7 @@
 import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
-
+import { Disclosure} from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import {Link} from 'react-router-dom';
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
@@ -30,57 +30,54 @@ export default function NavBar() {
                     className="block h-14 w-auto lg:hidden"
                     src="/logo_Tranquil (2).jpeg"
                     alt="Tranquil's Logo"
+                    
                   />
+                  <Link to="/">
                   <img
                     className="hidden h-14 w-auto lg:block"
                     src="/logo_Tranquil (2).jpeg"
                     alt="Tranquil's Logo"
                   />
+                  </Link>
                 </div>
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                   {/* Current: "border-indigo-500 text-gray-900", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" */}
-                  <a
-                    href="#"
-                    className="inline-flex items-center border-b-2 border-indigo-500 px-1 pt-1 text-sm font-medium text-gray-900"
-                  >
-                    Home
-                  </a>
-                  <a
-                    href="#"
+                  <Link
+                    to="/skin"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     Skin-Care
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to="/journal"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     Journal
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to="/Meditation"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     Meditation 
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to="/media"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     Music
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to="/reading"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
                     Reading
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to="/mood"
                     className="inline-flex items-center border-b-2 border-transparent px-1 pt-1 text-sm font-medium text-gray-500 hover:border-gray-300 hover:text-gray-700"
                   >
-                    Mood Analyser
-                  </a>
+                    How you doin?
+                  </Link>
                 </div>
               </div>
             </div>
